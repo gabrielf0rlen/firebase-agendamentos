@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="./../cordova.js"></script>
+        <script src="js/jquery.js"></script> 
+        <script src="bootstrap/js/bootstrap.js"></script>
+	    <!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+		<script src="js/firebase.js"></script>
+		<script src="js/index.js"></script>
+        <title>APLICATIVO</title>
+    </head>
+    <body>
+        <div class="container">
+			<div class="row">
+				<nav class="navbar navbar-dark bg-dark col-12">
+					<a class="navbar-brand" href="index.html">APLICATIVO</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Opções
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Cadastrar</a>
+									<a class="dropdown-item" href="consultarClientes.html">Consultar</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>  
+			</div>
+			<div class="row">
+				<div class="card mb-3 col-12">
+					<div class="card-body">
+						<h5 class="card-title">Cadastrar - Agendamento de Potenciais Clientes</h5>
+						<p class="card-text">Sistema utilizado para agendamento de serviços.</p>
+						<p>
+							<form>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Nome:</label>
+									<input type="text" class="form-control" id="txtNome">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Telefone:</label>
+									<input type="tel" class="form-control" id="txtTelefone" placeholder="(xx)xxxxx-xxxx">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Origem:</label>
+									<select class="form-control" id="txtOrigem">
+										<option>Celular</option>
+										<option>Fixo</option>
+										<option>Whatsapp</option>
+										<option>Facebook</option>
+										<option>Instagram</option>
+										<option>Google Meu Negocio</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Data do Contato:</label>
+									<input type="date" class="form-control" id="txtDataContato">
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlTextarea1">Observação</label>
+									<textarea class="form-control" id="txtObservacao" rows="3"></textarea>
+								</div>
+								<button type="button" id="btnInserir" class="btn btn-primary">Cadastrar</button>
+							</form>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

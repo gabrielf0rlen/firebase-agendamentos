@@ -25,8 +25,8 @@ var app = {
                 document.getElementById("txtNome").value = doc.data().nome;
                 document.getElementById("txtTelefone").value = doc.data().telefone;
                 document.getElementById("txtOrigem").value = doc.data().origem;
-                document.getElementById("txtDataContato").value = doc.data().data_contato;
-                document.getElementById("txtObservacao").value = doc.data().observacao;
+                document.getElementById("txtDataContato").value = doc.data().datacontato;
+                document.getElementById("txtObservacao").value = doc.data().obs;
             });
         })
         .catch((error) => {
